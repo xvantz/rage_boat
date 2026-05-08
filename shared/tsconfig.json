@@ -1,0 +1,25 @@
+{
+	"compilerOptions": {
+		"strict": true,
+		"rootDir": "./",
+		"target": "esNext",
+		"allowJs": true,
+		"module": "esNext",
+		"sourceMap": false,
+		"noEmit": true,
+		"moduleResolution": "node",
+		"noImplicitAny": true,
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"skipLibCheck": false,
+		"exactOptionalPropertyTypes": false,
+		"downlevelIteration": true,
+		"resolveJsonModule": true,
+		"types": [
+			"@ragempcommunity/types-client",
+			"@ragempcommunity/types-cef",
+			"@ragempcommunity/types-server"
+		]
+	}
+}

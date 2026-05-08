@@ -1,0 +1,40 @@
+{
+  "name": "nn_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "build": "pnpm install && pnpm run init:console && pnpm run build:client && pnpm run build:server",
+    "build:client": "pnpm -F client build",
+    "build:server": "pnpm -F server build",
+    "start": "ragemp-server.exe",
+    "startL": "./ragemp-server",
+    "dev": "concurrently \"pnpm -F client dev\" \"pnpm -F server dev\" \"nodemon\"",
+    "init:console": "pnpm exec rage-console init"
+  },
+  "nodemonConfig": {
+    "watch": [
+      "./packages/build/index.js"
+    ],
+    "exec": "./ragemp-server",
+    "ext": "js",
+    "delay": "1000"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@biomejs/biome": "2.4.4",
+    "@ragempcommunity/types-client": "^2.1.8",
+    "@ragempcommunity/types-server": "^2.1.8",
+    "concurrently": "^9.2.1",
+    "nodemon": "^3.1.14",
+    "esbuild": "^0.28",
+    "esbuild-plugin-alias": "^0.2.1"
+  },
+  "dependencies": {
+    "@xvantz/rage-console": "^0.1.0",
+    "zod": "^3.24.3",
+    "neverthrow": "^8.2.0"
+  }
+}
