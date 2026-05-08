@@ -1,6 +1,7 @@
 ragemp-server
 
 /client_packages/index.js
+/client_packages/
 client_packages/interface/console
 client_packages/interface/customConsole
 node_modules/
